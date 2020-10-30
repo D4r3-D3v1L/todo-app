@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+		<form action="/update/<%= tasks.id %>" method="post">
+			 <div class="form-group">
+ 	<label for="title">Edit Task</label>
+ 	<input required value="<%= tasks.task %>" type="text" class="form-control" name="task" id="task">
+ </div>	
+ <a href="/" class="btn btn-secondary">Cancel</a>
+
+ <button type="submit" class="btn btn-primary">Save</button>
+		</form>
+		
+	</div>
+</body>
+</html>

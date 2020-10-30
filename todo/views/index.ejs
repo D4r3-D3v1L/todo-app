@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+		<h1 class="mb-4">TODO app</h1>
+	<a href="/add" class="btn btn-sm btn-primary">Add Task</a>
+	<br>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Task</th>
+				<th>Date</th>
+				<th>Action</th>
+			</tr>
+		</thead>
+	<tbody>
+		<% tasks.forEach(tas => { %>
+			<tr>
+				<td><%= tas.task %></td>
+				<td><%= tas.time.toLocaleDateString() %></td>
+				<td>
+					<a href="edit/<%= tas.id %>" hre class="btn btn-sm btn-primary">Edit</a>
+					<a href="delete/<%= tas.id %>" class="btn btn-sm btn-danger">Delete</a>
+				</td>
+			</tr>
+		<% }) %>
+	</tbody>
+</table>
+	</div>
+</body>
+</html>
